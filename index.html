@@ -108,11 +108,11 @@
     &copy; 2025 KASHU. Designed with strategy & style.
   </footer>
   <script>
-  document.getElementByIdea('email_form').addEventListener('submit', function(event) {
-    event.preventDefault(); // Prevents the default form submission
+    document.getElementById('email_form').addEventListener('submit', function(event) {
+    event.preventDefault();
     const thankYouMessage = document.createElement('p');
     thankYouMessage.textContent = 'Thank you for your interest in Kashu! We will bring you exciting news about development updates shortly.';
-    event.target.replaceWith(thankYouMessage); // Replaces the form with the thank-you message
+    event.target.replaceWith(thankYouMessage);
     });
   </script>
 </body>
