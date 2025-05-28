@@ -1,74 +1,50 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>KASHU – Smart Money Game</title>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
   <style>
-    body {
-      background-color: #000;
-      color: #f5f5f5;
-      font-family: 'Playfair Display', serif;
-      margin: 0;
-    }
-    header {
-      background: radial-gradient(circle at top, #ffe34d, #ffd100);
-      color: #1a1a1a;
-      padding: 6rem 2rem 4rem;
-      text-align: center;
-      clip-path: ellipse(120% 100% at 50% 0%);
-    }
-    header h1 {
-      font-size: 3.5rem;
-      margin-bottom: 0.5rem;
-    }
-    header p {
-      font-size: 1.25rem;
-      margin-bottom: 2rem;
-      color: #000;
-    }
-    .container {
-      max-width: 1100px;
-      margin: auto;
-      padding: 2rem;
-    }
-    .cta-section {
-      text-align: center;
-      margin-top: 4rem;
-    }
-    .cta-section input,
-    .cta-section button {
+    body { background-color: #000; color: #f5f5f5; font-family: 'Playfair Display', serif; margin: 0; }
+    header { background: radial-gradient(circle at top, #ffe34d, #ffd100); color: #1a1a1a; padding: 6rem 2rem 4rem; text-align: center; clip-path: ellipse(120% 100% at 50% 0%); }
+    header h1 { font-size: 3.5rem; margin-bottom: 0.5rem; }
+    header p { font-size: 1.25rem; margin-bottom: 2rem; color: #000; }
+    .container { max-width: 1100px; margin: auto; padding: 2rem; }
+    section { background: #111; padding: 3rem; margin: 2rem 0; border-radius: 16px; box-shadow: 0 4px 20px rgba(255,255,255,0.05); }
+    h2 { color: #ffe34d; font-size: 2rem; }
+    ul { padding-left: 1.5rem; }
+    li { margin-bottom: 1rem; }
+    .image-box { text-align: center; margin: 2rem 0; }
+    .image-box img { width: 100%; max-width: 500px; border-radius: 12px; box-shadow: 0 0 20px rgba(255,255,255,0.1); }
+    .cta-section { text-align: center; margin-top: 4rem; }
+    .cta-section input, .cta-section button {
       padding: 1rem;
       margin-top: 1rem;
       border-radius: 999px;
       border: none;
       font-size: 1rem;
     }
-    .cta-section input {
-      width: 250px;
-      max-width: 80%;
-      border: 1px solid #ccc;
-    }
-    .cta-section button {
-      background: #ffe34d;
-      color: #000;
-      cursor: pointer;
-      margin-left: 1rem;
-    }
-    footer {
-      background: #1a1a1a;
-      text-align: center;
-      color: #ccc;
-      padding: 2rem;
-      margin-top: 4rem;
-    }
+    .cta-section input { width: 250px; max-width: 80%; border: 1px solid #ccc; }
+    .cta-section button { background: #ffe34d; color: #000; cursor: pointer; margin-left: 1rem; }
+
+    footer { background: #1a1a1a; text-align: center; color: #ccc; padding: 2rem; margin-top: 4rem; }
+
     @media (max-width: 768px) {
-      .cta-section input,
-      .cta-section button {
+      body { font-size: 0.95rem; }
+      header h1 { font-size: 2rem; }
+      header p { font-size: 1rem; }
+      .container { padding: 1rem; }
+      section { padding: 1.5rem; margin: 1rem 0; }
+      .image-box img { width: 100%; height: auto; }
+      .cta-section input, .cta-section button {
         display: block;
         width: 100%;
         margin: 0.5rem auto;
+      }
+      .cta-section button {
+        max-width: 250px;
       }
     }
   </style>
@@ -78,43 +54,83 @@
     <h1>KASHU</h1>
     <p>Build. Earn. Learn.</p>
   </header>
-
   <div class="container">
-    <section class="cta-section">
-      <h2>Get Notified at Launch</h2>
-      <form id="emailForm">
-        <input type="email" name="email" placeholder="Enter your email" required />
-        <button type="submit">Notify Me</button>
-      </form>
-      <p id="thanksMessage" style="margin-top: 1rem; display: none; color: #ffe34d;"></p>
+    <section>
+      <h2>What Is KASHU?</h2>
+      <p>KASHU is a strategy game where you build cities, balance budgets, and survive economic chaos — all while learning real-world personal finance skills in a fun, gamified way.</p>
     </section>
+    <section>
+      <h2>How to Play</h2>
+      <ul>
+        <li>Start with cash, land, and a worker</li>
+        <li>Buy zones, build infrastructure, and manage your city</li>
+        <li>Spin the Economy Wheel and react to changing events</li>
+        <li>Upgrade workers, invest, and collect income</li>
+        <li>Win by having the highest total asset value</li>
+        <li>It’s not just about money, it's about strategy, synergy, and sustainability.</li>
+      </ul>
+      <div class="image-box">
+        <img src="players.png" alt="Players enjoying the game">
+      </div>
+    </section>
+    <section>
+      <h2>Inside the Box</h2>
+      <p>Includes modular boards, event cards, worker tokens, and more.</p>
+      <div class="image-box">
+        <img src="components.png" alt="Game components">
+      </div>
+    </section>
+    <section>
+      <h2>Why You’ll Love It</h2>
+      <ul>
+        <li>Fun & Educational</li>
+        <li>Replayable with unique setups</li>
+        <li>Perfect for all, especially students and families</li>
+      </ul>
+    </section>
+    <section>
+      <h2>Pricing</h2>
+      <ul>
+        <li>Retail Price: €39.99</li>
+        <li>Launch discount: 30%</li>
+      </ul>
+    </section>
+    <div class="cta-section">
+      <h2>Get Notified at Launch</h2>
+      <form id="email_form" action="https://submify.vercel.app/kashu.personalfinance@gmail.com" method="POST">
+        <input type="email" name="email" placeholder="Enter your email" required style="padding: 1rem; border-radius: 999px; border: none; font-size: 1rem; width: 60%; max-width: 400px;">
+        <!-- <input type="hidden" name="_next" value="https://zacky160.github.io/kashu-personal.finance/"> -->
+        <button type="submit" style="padding: 1rem 2rem; border-radius: 999px; background-color: #ffe34d; color: #000; font-weight: bold; margin-left: 1rem; cursor: pointer;">Notify Me</button>
+      </form>
+    </div>
   </div>
-
   <footer>
     &copy; 2025 KASHU. Designed with strategy & style.
   </footer>
-
   <script>
-    document.getElementById('emailForm').addEventListener('submit', function(e) {
-      e.preventDefault();
-      const form = e.target;
-      const formData = new FormData(form);
-
-      fetch('https://formsubmit.co/ajax/kashu.personalfinance@gmail.com', {
-        method: 'POST',
-        headers: { 'Accept': 'application/json' },
-        body: formData
-      }).then(response => {
-        if (response.ok) {
-          form.style.display = 'none';
-          document.getElementById('thanksMessage').textContent =
-            'Thank you for your interest in Kashu! We will bring you exciting news about development updates shortly.';
-          document.getElementById('thanksMessage').style.display = 'block';
-        } else {
-          alert('There was an error. Please try again later.');
-        }
-      });
-    });
+    document.getElementById('email_form').addEventListener('submit', function(event) {
+    event.preventDefault();
+    const formData = new FormData(this);
+      
+    fetch("https://submify.vercel.app/kashu.personalfinance@gmail.com", {
+      method: 'POST',
+      body: formData
+    }.then(response => {
+    if (response.ok) {
+      alert('Form submitted successfully!');
+      form.reset();
+    } else {
+      alert('Form submission failed.');
+    }
+  })
+  .catch(error => {
+    console.error('Submission error:', error);
+    alert('There was an error submitting the form.');
+  });
+    
+    const thankYouMessage = document.createElement('p');
+    thankYouMessage.textContent = 'Thank you for your interest in Kashu! We will bring you exciting news about development updates shortly.';
+    event.target.replaceWith(thankYouMessage);
   </script>
 </body>
 </html>
