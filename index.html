@@ -50,10 +50,10 @@
   </style>
 </head>
 <body>
-  <li>Redirect Test VI</li>
   <header>
     <h1>KASHU</h1>
     <p>Build. Earn. Learn.</p>
+    <li>Redirect Test VII</li>
   </header>
   <div class="container">
     <section>
@@ -98,7 +98,7 @@
     </section>
     <div class="cta-section">
       <h2>Get Notified at Launch</h2>
-      <iframe name="dummyframe" id="dummyframe" style="display: none;"></iframe>
+      <iframe name="dummyframe" id="dummyframe"></iframe>
       <form id="email_form" action="https://submify.vercel.app/kashu.personalfinance@gmail.com" method="POST" target="dummyframe">
         <input type="email" name="email" placeholder="Enter your email" required style="padding: 1rem; border-radius: 999px; border: none; font-size: 1rem; width: 60%; max-width: 400px;">
         <!-- <input type="hidden" name="_next" value="https://zacky160.github.io/kashu-personal.finance/"> -->
@@ -110,22 +110,23 @@
     &copy; 2025 KASHU. Designed with strategy & style.
   </footer>
   <script>
+    
     let formSubmitted = false;
 
-    document.getElementById('email_form').addEventListener('submit', function () {
+    document.getElementById("email_form").addEventListener('submit', function () {
         formSubmitted = true;
       });
 
-    document.getElementById('dummyframe').addEventListener('load', function () {
+    document.getElementById("dummyframe").addEventListener('load', function () {
       if (!formSubmitted) return; // Ignore the first iframe load
       formSubmitted = false; // Reset flag so it doesn't trigger again unexpectedly
       
       const thankYouMessage = document.createElement('p');
       thankYouMessage.textContent = 'Thank you for your interest in Kashu! We will bring you exciting news about development updates shortly.';
       
-      const tgt = document.getElementById('email_form');
+      const tgt = document.getElementById("email_form");
       tgt.replaceWith(thankYouMessage);
-  }); -->
+  });
   </script>
 </body>
 </html>
