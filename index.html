@@ -111,17 +111,26 @@
     document.getElementById('email_form').addEventListener('submit', function(event) {
     event.preventDefault();
     const formData = new FormData(this);
+      
     fetch("https://submify.vercel.app/kashu.personalfinance@gmail.com", {
       method: 'POST',
       body: formData
-    }).then(response => {
-      const thankYouMessage = document.createElement('p');
-      thankYouMessage.textContent = 'Thank you for your interest in Kashu! We will bring you exciting news about development updates shortly.';
-      event.target.replaceWith(thankYouMessage);
-    }).catch(error => {
-      console.error('Error:', error);
-      });
-    });
+    }.then(response => {
+    if (response.ok) {
+      alert('Form submitted successfully!');
+      form.reset();
+    } else {
+      alert('Form submission failed.');
+    }
+  })
+  .catch(error => {
+    console.error('Submission error:', error);
+    alert('There was an error submitting the form.');
+  });
+    
+    const thankYouMessage = document.createElement('p');
+    thankYouMessage.textContent = 'Thank you for your interest in Kashu! We will bring you exciting news about development updates shortly.';
+    event.target.replaceWith(thankYouMessage);
   </script>
 </body>
 </html>
