@@ -50,10 +50,10 @@
   </style>
 </head>
 <body>
+  <li>Redirect Test VI</li>
   <header>
     <h1>KASHU</h1>
     <p>Build. Earn. Learn.</p>
-    <li>Redirect Test V</li>
   </header>
   <div class="container">
     <section>
@@ -109,11 +109,22 @@
   <footer>
     &copy; 2025 KASHU. Designed with strategy & style.
   </footer>
-  <!-- <script>
-    document.getElementById('email_form').addEventListener('submit', function(event) {   
+  <script>
+    let formSubmitted = false;
+
+    document.getElementById('email_form').addEventListener('submit', function () {
+        formSubmitted = true;
+      });
+
+    document.getElementById('dummyframe').addEventListener('load', function () {
+      if (!formSubmitted) return; // Ignore the first iframe load
+      formSubmitted = false; // Reset flag so it doesn't trigger again unexpectedly
+      
       const thankYouMessage = document.createElement('p');
       thankYouMessage.textContent = 'Thank you for your interest in Kashu! We will bring you exciting news about development updates shortly.';
-      event.target.replaceWith(thankYouMessage);
+      
+      const tgt = document.getElementById('email_form');
+      tgt.replaceWith(thankYouMessage);
   }); -->
   </script>
 </body>
