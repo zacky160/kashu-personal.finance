@@ -1,40 +1,120 @@
-<div class="cta-section">
-  <h2>Get Notified at Launch</h2>
-  <form id="emailForm">
-    <input type="email" name="email" placeholder="Enter your email" required
-      style="padding: 1rem; border-radius: 999px; border: none; font-size: 1rem; width: 60%; max-width: 400px;">
-    <button type="submit"
-      style="padding: 1rem 2rem; border-radius: 999px; background-color: #ffe34d; color: #000; font-weight: bold; margin-left: 1rem; cursor: pointer;">
-      Notify Me
-    </button>
-  </form>
-  <p id="thanksMessage" style="margin-top: 1rem; display: none; color: #ffe34d;"></p>
-</div>
-
-<script>
-document.getElementById('emailForm').addEventListener('submit', function(e) {
-  e.preventDefault();
-  const form = e.target;
-  const formData = new FormData(form);
-
-  fetch('https://formsubmit.co/ajax/kashu.personalfinance@gmail.com', {
-    method: 'POST',
-    headers: {
-      'Accept': 'application/json'
-    },
-    body: formData
-  }).then(response => {
-    if (response.ok) {
-      form.style.display = 'none';
-      document.getElementById('thanksMessage').textContent =
-        'Thank you for your interest in Kashu! We will bring you exciting news about development updates shortly.';
-      document.getElementById('thanksMessage').style.display = 'block';
-    } else {
-      alert('There was an error. Please try again later.');
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>KASHU – Smart Money Game</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      background-color: #000;
+      color: #f5f5f5;
+      font-family: 'Playfair Display', serif;
+      margin: 0;
     }
-  });
-});
-</script>
+    header {
+      background: radial-gradient(circle at top, #ffe34d, #ffd100);
+      color: #1a1a1a;
+      padding: 6rem 2rem 4rem;
+      text-align: center;
+      clip-path: ellipse(120% 100% at 50% 0%);
+    }
+    header h1 {
+      font-size: 3.5rem;
+      margin-bottom: 0.5rem;
+    }
+    header p {
+      font-size: 1.25rem;
+      margin-bottom: 2rem;
+      color: #000;
+    }
+    .container {
+      max-width: 1100px;
+      margin: auto;
+      padding: 2rem;
+    }
+    .cta-section {
+      text-align: center;
+      margin-top: 4rem;
+    }
+    .cta-section input,
+    .cta-section button {
+      padding: 1rem;
+      margin-top: 1rem;
+      border-radius: 999px;
+      border: none;
+      font-size: 1rem;
+    }
+    .cta-section input {
+      width: 250px;
+      max-width: 80%;
+      border: 1px solid #ccc;
+    }
+    .cta-section button {
+      background: #ffe34d;
+      color: #000;
+      cursor: pointer;
+      margin-left: 1rem;
+    }
+    footer {
+      background: #1a1a1a;
+      text-align: center;
+      color: #ccc;
+      padding: 2rem;
+      margin-top: 4rem;
+    }
+    @media (max-width: 768px) {
+      .cta-section input,
+      .cta-section button {
+        display: block;
+        width: 100%;
+        margin: 0.5rem auto;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>KASHU</h1>
+    <p>Build. Earn. Learn.</p>
+  </header>
 
+  <div class="container">
+    <section class="cta-section">
+      <h2>Get Notified at Launch</h2>
+      <form id="emailForm">
+        <input type="email" name="email" placeholder="Enter your email" required />
+        <button type="submit">Notify Me</button>
+      </form>
+      <p id="thanksMessage" style="margin-top: 1rem; display: none; color: #ffe34d;"></p>
+    </section>
+  </div>
 
+  <footer>
+    &copy; 2025 KASHU. Designed with strategy & style.
+  </footer>
 
+  <script>
+    document.getElementById('emailForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      const form = e.target;
+      const formData = new FormData(form);
+
+      fetch('https://formsubmit.co/ajax/kashu.personalfinance@gmail.com', {
+        method: 'POST',
+        headers: { 'Accept': 'application/json' },
+        body: formData
+      }).then(response => {
+        if (response.ok) {
+          form.style.display = 'none';
+          document.getElementById('thanksMessage').textContent =
+            'Thank you for your interest in Kashu! We will bring you exciting news about development updates shortly.';
+          document.getElementById('thanksMessage').style.display = 'block';
+        } else {
+          alert('There was an error. Please try again later.');
+        }
+      });
+    });
+  </script>
+</body>
+</html>
